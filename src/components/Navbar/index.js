@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import useStyles from './styles'
 import logo from '../../assets/logo.svg'
 
-export default function NavBar(props) {
+export default function NavBar() {
   const classes = useStyles()
   const appBarItems = [
     {
