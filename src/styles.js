@@ -1,11 +1,15 @@
 import makeStyles from '@material-ui/styles/makeStyles'
+import colors from './colors'
 
 const styles = makeStyles({
   App: {
-    textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    background: '#ffffff'
+    background: colors.gallery,
+    minHeight: '100vh',
+    width: '100vw',
+    border: '0.75rem solid',
+    borderColor: colors.bondiBlue
   }
 })
 

@@ -6,7 +6,13 @@ const colors = {
   chineseBlack: '#101010',
   lotion: '#fafdfd',
   alizarinCrimson: '#eb2034',
-  white: '#ffffff'
+  white: '#ffffff',
+
+  gallery: '#eeeeee',
+  bondiBlue: '#00adb5',
+  brightGray: '#393e46',
+  ebonyClay: '#222831',
+  dustyGray: '$#979797'
 }
 
 export default colors

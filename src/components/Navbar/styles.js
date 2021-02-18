@@ -2,46 +2,33 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import colors from '../../colors'
 
 const styles = makeStyles(theme => ({
-  scrollToTopContainer: {
-    position: 'fixed',
-    bottom: theme.spacing(3),
-    right: theme.spacing(3)
+  container: {
+    marginTop: '3rem'
   },
-  scrollToTopIcon: {
-    color: colors.white,
-    backgroundColor: colors.raisinBlack
-  },
-  appBar: {
-    background: colors.white,
-    color: colors.raisinBlack
-  },
-  appBarItemContainer: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
-  appBarItem: {
+  item: {
     fontFamily: 'Raleway',
     borderBottom: '1px solid transparent',
     fontWeight: '600',
-    fontSize: '1rem',
+    fontSize: '1.25rem',
+    color: colors.ebonyClay,
     display: 'inline-block',
     '&::after': {
       content: '""',
       display: 'block',
-      borderBottom: `solid 3px ${colors.brightNavyBlue}`,
-      transform: 'scaleX(0)',
-      transition: 'transform 250ms ease-in-out'
+      borderBottom: `solid 5px ${colors.bondiBlue}`,
+      borderRadius: '10px',
+      transition: 'border-color 250ms ease-in-out'
     },
     '&:hover': {
-      color: colors.brightNavyBlue,
+      color: colors.bondiBlue,
       '&::after': {
-        transform: 'scaleX(1)'
+        borderColor: '#276678'
       }
     }
   },
   appIcon: {
-    width: '1.5rem',
-    height: '1.5rem'
+    width: '3rem',
+    height: '3rem'
   }
 }))
 

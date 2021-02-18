@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.0" viewBox='0 0 512 512' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <pattern id='bg-image' width='1' height='1' patternUnits='objectBoundingBox'>
+      <image xlink:href='https://placeimg.com/100/100/nature/7' width='100' height='100' />
+    </pattern>
+  </defs>
+  <path d='M50,90 L20,60 
+           A15,15 0 0,1 50,30 
+           A15,15 0 0,1 80,60 z' />
+</svg>
