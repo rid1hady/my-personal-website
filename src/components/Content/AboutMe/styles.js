@@ -2,24 +2,21 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import colors from '../../../colors'
 
 const styles = makeStyles(theme => ({
-  greeting: {
-    marginBottom: '2rem'
-  },
   title: {
     fontFamily: 'Raleway',
-    fontSize: '3rem',
+    fontSize: '2.5em',
     fontWeight: 800,
     color: colors.ebonyClay
   },
   normalText: {
     fontFamily: 'Raleway',
-    fontSize: '1.2rem',
+    fontSize: '1.2em',
     fontWeight: 500,
     color: colors.brightGray
   },
   subtitle: {
     fontFamily: 'Raleway',
-    fontSize: '2rem',
+    fontSize: '2em',
     fontWeight: 600,
     color: colors.ebonyClay
   }

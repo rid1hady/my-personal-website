@@ -5,30 +5,27 @@ import Illustration from '../../Illustration'
 import ProfilePicture from '../../../assets/profilePictureZoom.png'
 import useStyles from './styles'
 
-function AboutMe (props) {
+function AboutMe () {
   const classes = useStyles()
   return (
     <Grid container spacing={3} id='about-me' direction='column'>
       <Grid
         item
         container
-        className={classes.greeting}
         alignItems='center'
         spacing={5}
       >
-        <Grid item xs={3}>
+        <Grid item>
           <Illustration
             image={ProfilePicture}
             size={'medium'}
             imageName={'profilePicture'}
           />
         </Grid>
-        <Grid item xs={7} container direction='column'>
+        <Grid item container direction='column'>
           <Typography className={classes.title}>
             {'Hi! '}
             <i>{'Apa Kabar? '}</i>
-          </Typography>
-          <Typography className={classes.title}>
             {`I'm Ridwan Hady!`}
           </Typography>
         </Grid>
