@@ -10,7 +10,7 @@ const styles = makeStyles(theme => ({
     borderBottom: '1px solid transparent',
     fontWeight: '600',
     fontSize: '1.25rem',
-    color: colors.ebonyClay,
+    color: theme.palette.text.primary,
     display: 'inline-block',
     '&::after': {
       content: '""',
@@ -25,6 +25,9 @@ const styles = makeStyles(theme => ({
         borderColor: '#276678'
       }
     }
+  },
+  darkModeToggle: {
+    color: theme.palette.text.primary
   },
   appIcon: {
     width: '3rem',

@@ -12,7 +12,7 @@ const colors = {
   bondiBlue: '#00adb5',
   brightGray: '#393e46',
   ebonyClay: '#222831',
-  dustyGray: '$#979797'
+  dustyGray: '#979797'
 }
 
 export default colors
