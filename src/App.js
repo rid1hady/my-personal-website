@@ -1,26 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import useDarkMode from './lib/useDarkMode'
 import Container from '@material-ui/core/Container'
-import Switch from '@material-ui/core/Switch'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Navbar from './components/Navbar'
 import Content from './components/Content'
+import Footer from './components/Footer'
 import useStyles, { lightTheme, darkTheme } from './styles'
 import { ThemeProvider } from '@material-ui/core/styles'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [theme, toggleTheme] = useDarkMode()
   const classes = useStyles()
-  const toggleTheme = () => {
-    setDarkMode(!darkMode)
-  }
+  const isDarkMode = theme === 'dark'
+  const themeMode = isDarkMode ? darkTheme : lightTheme
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={themeMode}>
       <CssBaseline />
       <Container maxWidth={false} className={classes.App} disableGutters>
         <Container maxWidth='md'>
-          <Navbar toggleTheme={toggleTheme} darkMode={darkMode}/>
-          <Content />
+          <BrowserRouter>
+            <Navbar toggleTheme={toggleTheme} darkMode={isDarkMode}/>
+            <Content />
+            <Footer />
+          </BrowserRouter>
         </Container>
       </Container>
     </ThemeProvider>

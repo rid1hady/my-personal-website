@@ -5,24 +5,33 @@ const styles = makeStyles(theme => ({
   container: {
     marginTop: '3rem'
   },
+  mobileContainer: {
+    backgroundColor: theme.palette.background.default,
+    boxShadow: '0 -1px 10px 3px rgb(68 61 61 / 30%)',
+    position: 'fixed',
+    left: 0,
+    bottom: 0,
+    padding: '1em',
+    zIndex: 20
+  },
   item: {
-    fontFamily: 'Raleway',
-    borderBottom: '1px solid transparent',
     fontWeight: '600',
-    fontSize: '1.25rem',
     color: theme.palette.text.primary,
     display: 'inline-block',
-    '&::after': {
-      content: '""',
-      display: 'block',
-      borderBottom: `solid 5px ${colors.bondiBlue}`,
-      borderRadius: '10px',
-      transition: 'border-color 250ms ease-in-out'
-    },
-    '&:hover': {
-      color: colors.bondiBlue,
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.25rem',
       '&::after': {
-        borderColor: '#276678'
+        content: '""',
+        display: 'block',
+        borderBottom: `solid 5px ${colors.bondiBlue}`,
+        borderRadius: '10px',
+        transition: 'border-color 250ms ease-in-out'
+      },
+      '&:hover': {
+        color: colors.bondiBlue,
+        '&::after': {
+          borderColor: '#276678'
+        }
       }
     }
   },
