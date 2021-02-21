@@ -7,11 +7,11 @@ const styles = makeStyles(theme => ({
   },
   mobileContainer: {
     backgroundColor: theme.palette.background.default,
-    boxShadow: '0 -1px 10px 3px rgb(68 61 61 / 30%)',
+    boxShadow: '0 -1px 10px 3px rgb(0 173 181 / 30%)',
     position: 'fixed',
     left: 0,
     bottom: 0,
-    padding: '1em',
+    padding: '0.75em',
     zIndex: 20
   },
   item: {

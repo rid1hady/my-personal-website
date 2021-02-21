@@ -1,6 +1,7 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import AboutMe from './AboutMe'
+import Experiences from './Experiences'
 import useStyles from './styles'
 
 function Content(props) {
@@ -8,12 +9,10 @@ function Content(props) {
   return (
     <div className={classes.container}>
       <Switch>
-        <Route path='/'>
-          <AboutMe />
-        </Route>
-        <Route path='/about-me'>
-          <AboutMe />
-        </Route>
+        <Route exact path='/' component={AboutMe} />
+        <Route exact path='/about-me' component={AboutMe} />
+        <Route exact path='/experiences' component={Experiences} />
+        <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
     </div>
   )

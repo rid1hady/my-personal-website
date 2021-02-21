@@ -29,6 +29,9 @@ const commonStyle = {
       fontSize: '1.2rem',
       textAlign: 'justify',
       fontWeight: 500
+    },
+    body2: {
+      textAlign: 'justify'
     }
   }
 }
