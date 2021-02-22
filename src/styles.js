@@ -26,7 +26,6 @@ const commonStyle = {
       fontWeight: 600
     },
     body1: {
-      fontSize: '1.2rem',
       textAlign: 'justify',
       fontWeight: 500
     },

@@ -40,8 +40,7 @@ const styles = makeStyles(theme => ({
   },
   appIcon: {
     width: '3rem',
-    height: '3rem',
-    fill: 'white'
+    height: '3rem'
   }
 }))
 

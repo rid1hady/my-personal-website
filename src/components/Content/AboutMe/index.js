@@ -3,15 +3,18 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Illustration from '../../Illustration'
 import ProfilePicture from '../../../assets/profilePictureZoom.png'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-function AboutMe () {
+function AboutMe() {
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'))
   return (
     <Grid container spacing={3} id='about-me' direction='column'>
       <Grid
         item
         container
-        alignItems='center'
+        alignItems={isMobile ? 'left' : 'center'}
         spacing={5}
+        direction={isMobile ? 'column' : 'row'}
       >
         <Grid item>
           <Illustration
@@ -20,11 +23,13 @@ function AboutMe () {
             imageName={'profilePicture'}
           />
         </Grid>
-        <Grid item container direction='column'>
-          <Typography variant='h3'>
-            {'Hi! '}
-            <i>{'Apa Kabar? '}</i>
-            {`I'm Ridwan Hady!`}
+        <Grid item xs container>
+          <Typography display='inline' align='left' variant='h4'>
+            <b>
+              {'Hi! '}
+              <i>{'Apa Kabar? '}</i>
+              {`I'm Ridwan Hady!`}
+            </b>
           </Typography>
         </Grid>
       </Grid>
@@ -37,8 +42,8 @@ function AboutMe () {
           {`Recently, I've been challenging myself to build Chatbot on Mental Health as my Final Assignment. Yes, I'm still a Final Year Student at Institut Teknologi Bandung, hopefully I can grad by July this year.`}
         </Typography>
         <br />
-        <Typography variant='h4'>
-          {`More fun fact about me...`}
+        <Typography variant='h5'>
+          <b>{`More fun fact about me...`}</b>
         </Typography>
         <br />
         <Typography>

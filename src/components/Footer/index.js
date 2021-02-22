@@ -25,13 +25,13 @@ function Footer() {
     },
     {
       icon: InstagramIcon,
-      href: 'https://instagram.com/ridwanhady'
+      href: 'https://instagram.com/rid1hady'
     }
   ]
   return (
     <Grid container direction='column' className={classes.footerContainer}>
       <Grid item xs>
-        <Typography variant='h5' className={classes.text}>
+        <Typography variant='subtitle1' className={classes.text}>
           {`Let's Connect!`}
         </Typography>
       </Grid>
@@ -39,12 +39,8 @@ function Footer() {
         {footerIcons.map(item => {
           const Icon = item.icon
           return (
-            <IconButton
-              href={item.href}
-              target='_blank'
-              edge='start'
-            >
-              <Icon className={classes.icon}/>
+            <IconButton href={item.href} target='_blank' edge='start'>
+              <Icon className={classes.icon} />
             </IconButton>
           )
         })}
