@@ -9,17 +9,18 @@ const styles = makeStyles(theme => ({
     }
   },
   text: {
+    fontWeight: 600,
     display: 'inline-block',
     '&::before': {
       content: '""',
       display: 'block',
-      borderBottom: `solid 5px ${colors.bondiBlue}`,
+      borderBottom: `solid 3px ${colors.bondiBlue}`,
       borderRadius: '10px'
     }
   },
   icon: {
-    width: '2rem',
-    height: '2rem',
+    width: '1.5rem',
+    height: '1.5rem',
     color: colors.bondiBlue
   }
 }))

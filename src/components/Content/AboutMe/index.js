@@ -47,7 +47,7 @@ function AboutMe() {
         </Typography>
         <br />
         <Typography>
-          {`I really loves Comic. I have a bunch of reading list from all over the world (Japanese Manga, Korean Manhua, Chinese Manhwa, and Webtoon as well) with multiple genres. My favorite comic still One Piece by Eichiro Oda tho.`}
+          {`I really loves Comic. I have a bunch of reading list from all over the world (Japanese Manga, Korean Manhwa, Chinese Manhua, and Webtoon as well) with multiple genres. My favorite comic still One Piece by Eichiro Oda tho.`}
         </Typography>
         <br />
         <Typography>

@@ -12,6 +12,10 @@ function Content(props) {
         <Route exact path='/' component={AboutMe} />
         <Route exact path='/about-me' component={AboutMe} />
         <Route exact path='/experiences' component={Experiences} />
+        <Route exact path='/blog' component={() => {
+               window.location.href = 'https://blog.ridwanhady.com'
+               return null
+        }} />
         <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
     </div>

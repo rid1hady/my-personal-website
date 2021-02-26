@@ -32,7 +32,7 @@ function Footer() {
     <Grid container direction='column' className={classes.footerContainer}>
       <Grid item xs>
         <Typography variant='subtitle1' className={classes.text}>
-          {`Let's Connect!`}
+          {`Ridwan Hady © 2021`}
         </Typography>
       </Grid>
       <Grid item container xs direction='row'>

@@ -21,8 +21,8 @@ export default function NavBar({ toggleTheme, darkMode }) {
       ref: `/experiences`
     },
     {
-      text: 'Contact',
-      ref: `/contact`
+      text: 'Blog',
+      ref: `/blog`
     }
   ]
 
