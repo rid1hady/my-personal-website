@@ -7,9 +7,18 @@ import MitraBukalapakLogo from '../../../assets/MitraBukalapak.png'
 import ItbLogo from '../../../assets/ITB.jpg'
 import useStyles from './styles'
 
+interface ExperienceItem {
+  title: string
+  image: string
+  duration: string
+  subtitle: string
+  description: string
+  tags?: string[]
+}
+
 function Experiences() {
   const classes = useStyles()
-  const workExperienceItems = [
+  const workExperienceItems: ExperienceItem[] = [
     {
       title: 'AdaKerja',
       image: AdaKerjaLogo,
@@ -41,7 +50,7 @@ function Experiences() {
     }
   ]
 
-  const educationItems = [
+  const educationItems: ExperienceItem[] = [
     {
       title: 'Institut Teknologi Bandung',
       image: ItbLogo,
@@ -61,7 +70,7 @@ function Experiences() {
     }
   ]
 
-  const renderExperience = item => {
+  const renderExperience = (item: ExperienceItem) => {
     return (
       <Grid item container alignItems='center' spacing={3}>
         <Grid item>
@@ -95,7 +104,7 @@ function Experiences() {
             </Typography>
             <br />
           </Grid>
-          {(item.tags?.length > 0) && <Grid item xs>
+          {(item.tags && item.tags.length > 0) && <Grid item xs>
             {item.tags.map(tag => {
               return (
                 <Typography

@@ -7,10 +7,16 @@ import IconButton from '@material-ui/core/IconButton'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
 import NightsStayIcon from '@material-ui/icons/NightsStay'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { Theme } from '@material-ui/core'
 
-export default function NavBar({ toggleTheme, darkMode }) {
+export interface NavbarProps {
+  toggleTheme: () => void
+  isDarkMode: boolean
+}
+
+export default function NavBar(props: NavbarProps) {
   const classes = useStyles()
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
   const appBarItems = [
     {
       text: 'About Me',
@@ -19,10 +25,6 @@ export default function NavBar({ toggleTheme, darkMode }) {
     {
       text: 'Experiences',
       ref: `/experiences`
-    },
-    {
-      text: 'Blog',
-      ref: `/blog`
     }
   ]
 
@@ -38,10 +40,10 @@ export default function NavBar({ toggleTheme, darkMode }) {
           ))}
           <IconButton
             arial-label='darkMode toggler'
-            onClick={toggleTheme}
+            onClick={props.toggleTheme}
             className={classes.darkModeToggle}
           >
-            {darkMode ? <NightsStayIcon /> : <WbSunnyIcon />}
+            {props.isDarkMode ? <NightsStayIcon /> : <WbSunnyIcon />}
           </IconButton>
       </>
     )
@@ -66,7 +68,7 @@ export default function NavBar({ toggleTheme, darkMode }) {
             >
               <g
                 transform='translate(0.000000,484.000000) scale(0.100000,-0.100000)'
-                fill={darkMode ? '#eeeeee' : '#222831'}
+                fill={props.isDarkMode ? '#eeeeee' : '#222831'}
                 stroke='none'
               >
                 <path

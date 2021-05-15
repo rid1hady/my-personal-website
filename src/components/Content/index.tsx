@@ -4,7 +4,7 @@ import AboutMe from './AboutMe'
 import Experiences from './Experiences'
 import useStyles from './styles'
 
-function Content(props) {
+function Content() {
   const classes = useStyles()
   return (
     <div className={classes.container}>

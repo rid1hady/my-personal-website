@@ -15,7 +15,7 @@ const styles = makeStyles(theme => ({
     zIndex: 20
   },
   item: {
-    fontWeight: '600',
+    fontWeight: 600,
     color: theme.palette.text.primary,
     display: 'inline-block',
     [theme.breakpoints.up('sm')]: {

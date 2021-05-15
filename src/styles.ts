@@ -3,6 +3,7 @@ import {
   makeStyles,
   responsiveFontSizes
 } from '@material-ui/core/styles'
+import { TypographyOptions } from '@material-ui/core/styles/createTypography'
 import colors from './colors'
 
 const styles = makeStyles((theme) => ({
@@ -16,22 +17,16 @@ const styles = makeStyles((theme) => ({
   }
 }))
 
-const commonStyle = {
-  typography: {
-    fontFamily: 'Raleway',
-    h3: {
-      fontWeight: 800
-    },
-    h4: {
-      fontWeight: 600
-    },
-    body1: {
-      textAlign: 'justify',
-      fontWeight: 500
-    },
-    body2: {
-      textAlign: 'justify'
-    }
+const typographyOptions : TypographyOptions = {
+  fontFamily: 'Raleway',
+  h3: {
+    fontWeight: 800
+  },
+  h4: {
+    fontWeight: 600
+  },
+  body1: {
+    fontWeight: 500
   }
 }
 
@@ -39,14 +34,14 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
   palette: {
     type: 'light',
     background: {
-      default: colors.gallery,
+      default: colors.white,
     },
     text: {
       primary: colors.ebonyClay,
       secondary: colors.dustyGray
     }
   },
-  ...commonStyle
+  typography: typographyOptions
 }))
 
 export const darkTheme = responsiveFontSizes(
@@ -61,7 +56,7 @@ export const darkTheme = responsiveFontSizes(
         secondary: colors.gallery
       }
     },
-    ...commonStyle
+    typography: typographyOptions
   })
 )
 

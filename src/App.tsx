@@ -21,7 +21,7 @@ function App() {
       <Container maxWidth={false} className={classes.App} disableGutters>
         <Container maxWidth='md'>
           <BrowserRouter>
-            <Navbar toggleTheme={toggleTheme} darkMode={isDarkMode}/>
+            <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
             <Content />
             <Footer />
           </BrowserRouter>

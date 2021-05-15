@@ -3,7 +3,13 @@ import Box from '@material-ui/core/Box'
 import useStyles from './styles'
 import classNames from 'classnames'
 
-export default function Illustration(props) {
+export interface IllustrationProps {
+  size: 'small' | 'medium'
+  image: string
+  imageName: string
+}
+
+export default function Illustration(props: IllustrationProps) {
   const classes = useStyles()
 
   return (

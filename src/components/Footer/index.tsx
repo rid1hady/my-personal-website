@@ -7,10 +7,16 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import useStyles from './styles'
+import { SvgIconComponent } from '@material-ui/icons'
+
+interface IconItem {
+  icon: SvgIconComponent
+  href: string
+}
 
 function Footer() {
   const classes = useStyles()
-  const footerIcons = [
+  const footerIcons: IconItem[] = [
     {
       icon: EmailIcon,
       href: 'mailto:ridwanharifin@gmail.com'
@@ -28,6 +34,7 @@ function Footer() {
       href: 'https://instagram.com/rid1hady'
     }
   ]
+
   return (
     <Grid container direction='column' className={classes.footerContainer}>
       <Grid item xs>

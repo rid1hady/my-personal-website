@@ -4,15 +4,16 @@ import Typography from '@material-ui/core/Typography'
 import Illustration from '../../Illustration'
 import ProfilePicture from '../../../assets/profilePictureZoom.png'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { Theme } from '@material-ui/core'
 
 function AboutMe() {
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
   return (
     <Grid container spacing={3} id='about-me' direction='column'>
       <Grid
         item
         container
-        alignItems={isMobile ? 'left' : 'center'}
+        alignItems={isMobile ? 'flex-start' : 'center'}
         spacing={5}
         direction={isMobile ? 'column' : 'row'}
       >

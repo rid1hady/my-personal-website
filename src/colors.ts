@@ -1,4 +1,4 @@
-const colors = {
+const colors : { [color: string]: string } = {
   brightNavyBlue: '#1a74e2',
   pictonBlue: '#3fa0ef',
   mayaBlue: '#6bd0ff',
